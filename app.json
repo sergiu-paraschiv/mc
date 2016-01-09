@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "web-ui",
-      "script": "build/Daemons/Webserver.js",
+      "script": "build/Daemons/WebServer.js",
       "args": [],
       "watch": ["build"],
       "merge_logs": true,
