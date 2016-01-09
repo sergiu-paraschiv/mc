@@ -1,0 +1,22 @@
+{
+  "name": "mc",
+  "version": "1.0.0",
+  "description": "Raspberry PI 2 Media Center",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiu-paraschiv/mc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiu-paraschiv/mc/issues"
+  },
+  "homepage": "https://github.com/sergiu-paraschiv/mc#readme",
+  "dependencies": {
+    "nodecec": "0.0.3"
+  }
+}
