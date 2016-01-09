@@ -29,6 +29,6 @@ gulp.task('buildBrowserify', () => {
         .on('error', handleError)
         .pipe(source('bundle.js'))
         .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(BUILD_PATH));
 });

@@ -24,6 +24,7 @@ var CECService = function () {
         this.cec = new _nodecec2.default();
         this.cec.start();
         this.cec.on('key', function (data) {
+            console.log('key', data);
             if (_this.onKeyHandler) {
                 _this.onKeyHandler(data.name);
             }

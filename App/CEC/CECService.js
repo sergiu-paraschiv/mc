@@ -6,6 +6,7 @@ class CECService {
         this.cec = new CEC();
         this.cec.start();
         this.cec.on('key', (data) => {
+            console.log('key', data);
             if(this.onKeyHandler) {
                 this.onKeyHandler(data.name);
             }

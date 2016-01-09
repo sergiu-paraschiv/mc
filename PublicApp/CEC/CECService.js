@@ -1,9 +1,9 @@
-import {client} from 'websocket';
+import WS from 'websocket';
 
 class CECService {
     constructor() {
         this.onKeyHandler = null;
-        this.ws = new client();
+        this.ws = new WS.client();
         this.ws.connect('ws://localhost:8080/cec', 'echo-protocol');
 
         this.ws.on('connect', this.handleConnect.bind(this));
