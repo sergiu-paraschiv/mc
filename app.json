@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "web-ui",
+      "script": "build/Daemons/Webserver.js",
+      "args": [],
+      "watch": ["build"],
+      "merge_logs": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
