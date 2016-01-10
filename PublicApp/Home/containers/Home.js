@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CECService from '../../CEC/CECService';
+import OMXService from '../../OMX/OMXService';
 
 class Home extends Component {
     constructor(props) {
@@ -10,11 +11,20 @@ class Home extends Component {
         };
     }
 
+    // OMXService should run on server dummy...
     componentDidMount() {
         CECService.onKey((key) => {
-            this.setState({
-                keys: this.state.keys + "\n" + key
-            });
+            switch(key) {
+                case 'down':
+                    OMXService.start('/home/pi/videos/t1.mkv');
+                    break;
+                case 'up':
+                    OMXService.stop();
+                    break;
+                default:
+                    // noop
+            }
+
         });
     }
 
@@ -22,7 +32,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <label>Keys:</label>
-                <textarea value={this.state.keys} />
+                <textarea value={this.state.keys} style={{height: '500px'}} />
             </div>
         );
     }

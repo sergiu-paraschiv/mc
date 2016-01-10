@@ -54,6 +54,7 @@
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "nodecec": "0.0.3",
+    "omxplayer": "0.0.1",
     "promise": "^7.0.4",
     "pure-render-decorator": "^0.2.0",
     "react": "^0.14.3",

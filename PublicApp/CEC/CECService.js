@@ -1,22 +1,17 @@
-import WS from 'websocket';
-consol.log('x', WS);
 class CECService {
     constructor() {
         this.onKeyHandler = null;
-        this.ws = new WS.client();
-        this.ws.connect('ws://localhost:8080/cec', 'echo-protocol');
+        this.ws = new WebSocket('ws://localhost:8080/cec', 'echo-protocol');
 
-        this.ws.on('connect', this.handleConnect.bind(this));
+        this.handleConnect();
     }
 
-    handleConnect(connection) {
-        connection.on('message', (message) => {
-            console.log('m', message);
-
+    handleConnect() {
+        this.ws.onmessage = (event) => {
             if(this.onKeyHandler) {
-                this.onKeyHandler(message.utf8Data);
+                this.onKeyHandler(event.data);
             }
-        });
+        };
     }
 
     onKey(handler) {
