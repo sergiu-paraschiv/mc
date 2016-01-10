@@ -1,5 +1,5 @@
 import WS from 'websocket';
-
+consol.log('x', WS);
 class CECService {
     constructor() {
         this.onKeyHandler = null;
